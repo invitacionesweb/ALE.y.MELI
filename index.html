@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALE Y MELI</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+
+    <style>
+        /* Colores a evitar (dress code) */
+        .colores-evitar { margin-top: 20px; text-align: center; }
+        .colores-titulo { letter-spacing: 3px; margin-bottom: 16px; }
+        .colores-lista { display: flex; justify-content: center; gap: 40px; }
+        .color-item { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+        .color-circulo {
+            display: block; width: 49px; height: 49px; border-radius: 50%;
+            border: 1px solid #f8f3ed;
+        }
+        .color-nombre { letter-spacing: 2px; font-size: .9em; }
+    </style>
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <p data-aos="fade-up" class="titulocontador">Faltan:</p>
+    <div class="contador">
+        <div class="bloque">
+            <div data-aos="fade-up" id="dias" class="numero"></div>
+            <div data-aos="fade-up" class="etiqueta">Días</div>
+        </div>
+        <div class="bloque">
+            <div data-aos="fade-up" id="horas" class="numero"></div>
+            <div data-aos="fade-up" class="etiqueta">horas</div>
+        </div>
+        <div class="bloque">
+            <div data-aos="fade-up" id="minutos" class="numero"></div>
+            <div data-aos="fade-up" class="etiqueta">minutos</div>
+        </div>
+        <div class="bloque">
+            <div data-aos="fade-up" id="segundos" class="numero"></div>
+            <div data-aos="fade-up" class="etiqueta">segundos</div>
+        </div>
+    </div>
+
+    <div class="datos-ubicacion">
+        <div>
+            <img data-aos="fade-down" src="./img-editable/icono1.png" alt="">
+        </div>
+        <div class="datos">
+            <div>
+                <p data-aos="fade-up">17:15 Hs - Ceremonia<br>Santuario Jesús Sacramentado<br>Av. Corrientes 4433, CABA</p>
+                <a data-aos="fade-up" class="boton" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Santuario+Jes%C3%BAs+Sacramentado+Av.+Corrientes+4433+CABA">CÓMO LLEGAR</a>
+            </div>
+            <br>
+            <div>
+                <p data-aos="fade-up">20:00 Hs - Fiesta<br>Jano's San Isidro<br>Av. Bernabé Márquez 504, San Isidro</p>
+                <a data-aos="fade-up" class="boton" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Jano's+San+Isidro+Av.+Bernab%C3%A9+M%C3%A1rquez+504+San+Isidro">CÓMO LLEGAR</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="novios">
+        <img src="./img-editable/fotos1.png" alt="">
+        <div class="icono2">
+            <img data-aos="fade-down" src="./img-editable/icono2.png" alt="">
+        </div>
+        <div class="icono3">
+            <img data-aos="fade-up" src="./img-editable/icono3.png" alt="">
+        </div>
+    </div>
+
+    <div class="timeline">
+        <p class="timeline-title">El gran día...</p>
+        <div class="iconos">
+            <div class="iconos-block">
+                <img data-aos="fade-up" src="./img-editable/anillos.png" alt="icono">
+                <p data-aos="fade-up">17:15 Hs</p>
+                <P data-aos="fade-up" class="timing-text">Ceremonia</P>
+            </div>
+            <div class="iconos-block">
+                <img data-aos="fade-up" src="./img-editable/tulugar.png" alt="icono">
+                <p data-aos="fade-up">18:45 Hs</p>
+                <P data-aos="fade-up" class="timing-text">Rumbo al salón</P>
+            </div>
+            <div class="iconos-block">
+                <img data-aos="fade-up" src="./img-editable/copas.png" alt="icono">
+                <p data-aos="fade-up">20:00 Hs</p>
+                <P data-aos="fade-up" class="timing-text">Recepción</P>
+            </div>
+            <div class="iconos-block">
+                <img data-aos="fade-up" src="./img-editable/cena.png" alt="icono">
+                <p data-aos="fade-up">22:00 Hs</p>
+                <P data-aos="fade-up" class="timing-text">Cena</P>
+            </div>
+            <div class="iconos-block">
+                <img data-aos="fade-up" src="./img-editable/fiesta.png" alt="icono">
+                <p data-aos="fade-up">00:00 Hs</p>
+                <P data-aos="fade-up" class="timing-text">¡Empieza la joda!</P>
+            </div>
+            <div class="iconos-block">
+                <img data-aos="fade-up" src="./img-editable/vueltaacasa.png" alt="icono">
+                <p data-aos="fade-up">04:00 Hs</p>
+                <P data-aos="fade-up" class="timing-text">Fin de fiesta</P>
+            </div>
+        </div>
+    </div>
+
+    <div id="section2" class="accordion">
+        <h3 data-aos="fade-up">Antes de que nos consultes...</h3>
+
+        <div data-aos="fade-up" class="accordion-item">
+            <button class="accordion-header">¿CÓMO ME VISTO?</button>
+            <div class="accordion-content">
+                <p>DRESS CODE: ELEGANTE <br> ELLOS, DE TRAJE. ELLAS, DE VESTIDO O CON EL LOOK ELEGANTE QUE MÁS LES GUSTE. LO IMPORTANTE ES QUE SE SIENTAN CÓMODOS, SE PONGAN LINDOS Y VENGAN PREPARADOS PARA FESTEJAR CON NOSOTROS. 🤍</p>
+
+                <div class="colores-evitar">
+                    <p class="colores-titulo">COLORES A EVITAR</p>
+                    <div class="colores-lista">
+                        <div class="color-item">
+                            <span class="color-circulo" style="background:#f7f4ee;"></span>
+                            <span class="color-nombre">BLANCO</span>
+                        </div>
+                        <div class="color-item">
+                            <span class="color-circulo" style="background:#6b1a2a;"></span>
+                            <span class="color-nombre">BORDÓ</span>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+            </div>
+        </div>
+
+        <div data-aos="fade-up" class="accordion-item">
+            <button class="accordion-header">¿QUÉ LES REGALO?</button>
+            <div class="accordion-content">
+                <p>ESTAMOS FELICES DE COMPARTIR ESTE DÍA CON USTEDES. SI ADEMÁS QUIEREN HACERNOS UN REGALO, LES DEJAMOS NUESTROS DATOS POR ACÁ. 🤍</p>
+                <div class="gift-block">
+                    <div class="gift-box">
+                        <div class="boton2" data-copy="0000003100068234060089">COPIAR CVU</div>
+                    </div>
+                    <br>
+                    <div class="gift-box">
+                        <div class="boton2" data-copy="alejandrobugge.mp">COPIAR ALIAS</div>
+                    </div>
+                    <br>
+                    <p>Titular de la cuenta: Alejandro Lucas Bugge</p>
+                </div>
+            </div>
+        </div>
+
+        <div data-aos="fade-up" class="accordion-item">
+            <button class="accordion-header">¿LA FIESTA ES SOLO PARA ADULTOS?</button>
+            <div class="accordion-content">
+                <p>QUEREMOS QUE ESTA NOCHE SEA UNA EXCUSA PARA RELAJARSE, BRINDAR Y FESTEJAR CON NOSOTROS. ESTA CELEBRACIÓN SERÁ SOLO PARA ADULTOS.</p>
+            </div>
+        </div>
+
+        <div data-aos="fade-up" class="accordion-item">
+            <button class="accordion-header">¿DÓNDE ESTACIONO?</button>
+            <div class="accordion-content">
+                <p>HAY ESTACIONAMIENTO PARA TODOS LOS INVITADOS DENTRO DEL HIPÓDROMO. PUEDEN DEJAR EL AUTO DIRECTAMENTE EN EL PLAYÓN DE ESTACIONAMIENTO.</p>
+            </div>
+        </div>
+
+        <div class="icono4">
+            <img data-aos="fade-down" src="./img-editable/icono4.png" alt="">
+        </div>
+        <div class="icono5">
+            <img data-aos="fade-up" src="./img-editable/icono5.png" alt="">
+        </div>
+    </div>
+
+      <div class="forms">
+
+        <form name="asistenciaform" method="POST" action="https://script.google.com/macros/s/AKfycbywDYCiVhzQ421nAnKzjTw4AHYvjJvqgfVHjqbWAzPHyTpMcxvIIQPiZ-E_sIKNJzxG9A/exec" class="formulario">
+        <label class="formtitle">Sólo faltas vos, ¿Venís?</label>
+        <div class="radio-group">
+          <label class="radio-option"><input type="radio" name="ASISTENCIA" value="sí" required><span>Sí</span></label>
+          <label class="radio-option"><input type="radio" name="ASISTENCIA" value="no"><span>No</span></label>
+        </div>
+
+        <input type="text" name="NOMBRE" placeholder="Nombre" required>
+        <input type="text" name="APELLIDO" placeholder="Apellido" required>
+
+        <select name="DIETA" id="dieta" required>
+          <option value="" disabled selected>Preferencia alimentaria</option>
+          <option value="Nada">Ninguna</option>
+          <option value="Vegetariano">Vegetariano</option>
+          <option value="Celíaco">Celíaco</option>
+        </select>
+
+        <textarea name="ALERGIA" placeholder="¿Alguna alergia en especial?"></textarea>
+        <textarea name="CANCION" placeholder="Recomendale una canción al Dj 🎵"></textarea>
+
+        <p>Estamos pensando en organizar un traslado desde la iglesia <br> hasta el salón para que puedan disfrutar tranquilos. <br> Si tuviera un costo adicional:</p>
+        <select name="TRASLADO" id="traslado" required>
+          <option value="" disabled selected>¿Te gustaría utilizarlo?</option>
+          <option value="Sí, me sumaría">Sí, me gustaria</option>
+          <option value="No, gracias">No, gracias</option>
+        </select>
+
+        <button type="submit" class="boton">Enviar</button>
+      </form>
+
+        <p data-aos="fade-up">RECORDÁ COMPLETAR UN FORMULARIO POR PERSONA <br>ANTES DEL 16 DE NOVIEMBRE.</p>
+    </div>
+
+    <div class="novios">
+        <img src="./img-editable/fotos2.png" alt="">
+        <div class="icono6">
+            <img data-aos="fade-up" src="./img-editable/icono6.png" alt="">
+        </div>
+    </div>
+
+    <div class="end">
+        <img data-aos="fade-up" src="./img-editable/manosanillos.png" alt="">
+        <h2 data-aos="fade-up">Ale &amp; Meli</h2>
+        <p data-aos="fade-down">Te esperamos</p>
+    </div>
+
+    <footer>
+        <div class="contenido">
+            <div>
+                <img src="./img/logosiquiero.png" alt="icono si quiero">
+                <p>Hecho con &hearts; <br>
+                &#169; <b>Si,quiero!</b> - invitaciones inteligentes.
+                <br> Todos los derechos reservados.</p>
+            </div>
+            <div class="contenido-list">
+                <ul>
+                    <li><a target="_blank" href="https://www.instagram.com/siquiero.arg/"><i class="bi bi-instagram"></i></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/Invitaciones-web-112187784608681"><i class="bi bi-facebook"></i></a></li>
+                    <li><a target="_blank" href="mailto:siquiero.invitaciones@gmail.com"><i class="bi bi-envelope"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Verificar: el nombre de archivo abajo tiene "countdwon" — si el archivo real
+         se llama "countdown.js" el contador no va a cargar. -->
+    <script src="./countdwon.js"></script>
+    <script src="./form.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init();
+
+            // Acordeón de preguntas frecuentes (uno abierto a la vez)
+            var headers = document.querySelectorAll('.accordion-header');
+            headers.forEach(function (header) {
+                header.addEventListener('click', function () {
+                    var item = header.parentElement;
+                    var yaEstabaActivo = item.classList.contains('active');
+                    headers.forEach(function (otroHeader) {
+                        otroHeader.parentElement.classList.remove('active');
+                    });
+                    if (!yaEstabaActivo) item.classList.add('active');
+                });
+            });
+
+            // Copiar CVU / alias al portapapeles
+            document.querySelectorAll('[data-copy]').forEach(function (el) {
+                el.addEventListener('click', function () {
+                    copiarAlPortapapeles(el.getAttribute('data-copy'));
+                });
+            });
+        });
+
+        function copiarAlPortapapeles(texto) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(texto)
+                    .then(function () { alert('Copiaste "' + texto + '" a tu portapapeles'); })
+                    .catch(function () { copiarAlPortapapeleFallback(texto); });
+            } else {
+                copiarAlPortapapeleFallback(texto);
+            }
+        }
+
+        function copiarAlPortapapeleFallback(texto) {
+            var tempInput = document.createElement('input');
+            document.body.appendChild(tempInput);
+            tempInput.value = texto;
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('Copiaste "' + texto + '" a tu portapapeles');
+        }
+    </script>
+
+</body>
+</html>
